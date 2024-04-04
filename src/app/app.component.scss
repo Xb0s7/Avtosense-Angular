@@ -1,0 +1,21 @@
+
+.main {
+    overflow-x: hidden;
+    background-color: black;
+    &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../assets/blackBG.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @media (min-width: 1920px) {
+            background-size: 100% 100%;
+        }
+    }
+}

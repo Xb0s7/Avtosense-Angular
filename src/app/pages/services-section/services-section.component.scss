@@ -1,0 +1,61 @@
+@use '../../../variables.scss';
+
+.services-section {
+    @extend %layout;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    max-height: calc(100% - 100px);
+    color: variables.$color-main;
+    padding-left: 115px;
+
+    .content {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+       
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+    }
+
+    .icon-container {
+        height: 70px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        margin: 0px 0px 20px 0px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        transition: padding 1s, box-shadow 0.5s;
+        .icon {
+            height: inherit;
+            width: 100%;
+            padding: 12px;
+            color: variables.$color-main;
+            fill: variables.$color-main;
+        }
+    }
+    @media (max-width: 1024px) {
+        padding-left: 15px;
+    }
+}
+

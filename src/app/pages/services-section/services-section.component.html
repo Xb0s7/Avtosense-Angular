@@ -1,0 +1,9 @@
+<div class="services-section">
+    <h3 class="section-header">Услуги</h3>
+    <div class="content">
+        @for (service of services; track service.id) {
+            <service-card [service]="service"/>
+        }
+        <!-- <service-details ref="{serviceDetails}" /> -->
+    </div>
+</div>

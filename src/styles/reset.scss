@@ -1,15 +1,5 @@
-@use './variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
-body::-webkit-scrollbar {
-    /* WebKit */
-    width: 0;
-    height: 0;
-}
-
-/* You can add global styles to this file, and also import other style files */
 /* 	Standard CSS Reset */
-// RESET STYLES
+
 * {
     margin: 0;
     padding: 0;
@@ -43,13 +33,6 @@ section {
 body {
     line-height: 1;
     position: relative;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    font-family: 'Comfortaa', sans-serif;
 }
 ol,
 ul {
@@ -110,14 +93,4 @@ h4 {
     @media (max-width: 1024px) {
         margin-top: 100px;
     }
-}
-// RESET STYLES
-
-// GLOBAL STYLES
-
-.section-header {
-    font-size: 34px;
-    padding: 20px 0px;
-    margin: 10px 0px;
-    z-index: 1;
 }

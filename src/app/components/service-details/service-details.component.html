@@ -1,0 +1,20 @@
+<div class="service-details" ref="{ref}">
+    <div class="icon-container">{{selectedService.icon()}}</div>
+    <h3>{{selectedService.label}}</h3>
+    <fa-icon [icon]="faTimes" size={35} (onClick)='onCloseClick' class="close-button" />
+    <div class="service-content">
+        <h5 class="description">{selectedService.intro}</h5>
+        <ul>
+            @for (service of selectedService.allServices?)
+            {selectedService.allServices?.map((service, index) => (
+            <li key="{index}">
+                <FaCheckCircle
+                    size="{20}"
+                    class="service-list-icon"
+                ></FaCheckCircle>
+                <h6>{service.title} - <span>{service.description}</span></h6>
+            </li>
+            ))}
+        </ul>
+    </div>
+</div>

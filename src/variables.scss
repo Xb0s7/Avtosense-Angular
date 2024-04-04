@@ -1,0 +1,14 @@
+%layout {
+    width: 100%;
+    padding: 25px 25px 0px 125px;
+
+    @media (max-width: 1024px) {
+        padding: 15px 15px 0px 15px;
+    }
+}
+
+$color-main: white !default;
+$background-color-main: #111111 !default;
+$background-color-secondary: #1e1e1e !default;
+$secondary-color: #f30000 !default;
+$accent-color: red !default;
