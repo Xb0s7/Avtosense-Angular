@@ -1,21 +1,21 @@
-import Engine from '../../assets/brake.svg';
-// import Electric  from '../../assets/copper-wire.svg';
-// import Operations  from '../../assets/operations.svg';
-// import Transmission  from '../../assets/transmission.svg';
-// import Chassis  from '../../assets/chassis-icon.svg';
-// import Break  from '../../assets/brake.svg';
-// import Steering  from '../../assets/steering2.svg';
-// import Exhaust  from '../../assets/exhaust.svg';
-// import Cooling  from '../../assets/radiator.svg';
-// import Turbo  from '../../assets/power.svg';
-// import Insurance  from '../../assets/insurance.svg';
-// import Maintanance  from '../../assets/maintanance.svg';
+// import Engine from '../../assets/gearbox-engine.svg#gearbox-engine';
+import Electric  from '../../assets/copper-wire.svg';
+import Operations  from '../../assets/operations.svg';
+import Transmission  from '../../assets/transmission.svg';
+import Chassis  from '../../assets/chassis-icon.svg';
+import Break  from '../../assets/brake.svg';
+import Steering  from '../../assets/steering2.svg';
+import Exhaust  from '../../assets/exhaust.svg';
+import Cooling  from '../../assets/radiator.svg';
+import Turbo  from '../../assets/power.svg';
+import Insurance  from '../../assets/insurance.svg';
+import Maintanance  from '../../assets/maintanance.svg';
 
 export const SERVICES_ITEMS = [
     {
         id: 1,
         label: 'Двигател',
-        icon: Engine,
+        icon: 'gearbox-engine',
         intro: 'Компютърната диагностика се извършва, чрез специализиран диагностичен уред наричан "кодочетец", който извършва комуникация с главни електронни модули на електронните системи на автомобила. Прочитане и отстраняване на натрупани грешки, записани в паметта на автомобила по системи: като компютъра за управление на двигателя, антиблокиращата система ABS, климатичната система, въздушни възглавници и др. Специализирана автодиагностика и ремонт на FAP филтри.',
         allServices: [
             {
@@ -55,59 +55,59 @@ export const SERVICES_ITEMS = [
             },
         ],
     },
-    // {
-    //     id: 2,
-    //     label: 'Електрическа Система',
-    //     icon: () => <Electric class='icon' />,
-    // },
-    // {
-    //     id: 3,
-    //     label: 'Обща Поддръжка',
-    //     icon: () => <Operations class='icon' />,
-    // },
-    // {
-    //     id: 4,
-    //     label: 'Трансмисия',
-    //     icon: () => <Transmission class='icon' />,
-    // },
-    // {
-    //     id: 5,
-    //     label: 'Ходова Част',
-    //     icon: () => <Chassis class='icon' />,
-    // },
-    // {
-    //     id: 6,
-    //     label: 'Спирачна Система',
-    //     icon: () => <Break class='icon' />,
-    // },
-    // {
-    //     id: 7,
-    //     label: 'Кормилно Управление',
-    //     icon: () => <Steering class='icon' />,
-    // },
-    // {
-    //     id: 8,
-    //     label: 'Изпускателна Система',
-    //     icon: () => <Exhaust class='icon' />,
-    // },
-    // {
-    //     id: 9,
-    //     label: 'Охладителна Система',
-    //     icon: () => <Cooling class='icon' />,
-    // },
-    // {
-    //     id: 10,
-    //     label: 'Тунинг',
-    //     icon: () => <Turbo class='icon' />,
-    // },
-    // {
-    //     id: 11,
-    //     label: 'Диагностика',
-    //     icon: () => <Insurance class='icon' />,
-    // },
-    // {
-    //     id: 12,
-    //     label: 'Инспекция и Проверка',
-    //     icon: () => <Maintanance class='icon' style={{color: '#FFFFFF', fill: "#FFFFFFF"}}/>,
-    // },
+    {
+        id: 2,
+        label: 'Електрическа Система',
+        icon: 'electric-icon',
+    },
+    {
+        id: 3,
+        label: 'Обща Поддръжка',
+        icon: 'operations',
+    },
+    {
+        id: 4,
+        label: 'Трансмисия',
+        icon: 'transmission',
+    },
+    {
+        id: 5,
+        label: 'Ходова Част',
+        icon: 'chassis-icon',
+    },
+    {
+        id: 6,
+        label: 'Спирачна Система',
+        icon: "brake",
+    },
+    {
+        id: 7,
+        label: 'Кормилно Управление',
+        icon: "steering",
+    },
+    {
+        id: 8,
+        label: 'Изпускателна Система',
+        icon: "exhaust",
+    },
+    {
+        id: 9,
+        label: 'Охладителна Система',
+        icon: "radiator",
+    },
+    {
+        id: 10,
+        label: 'Тунинг',
+        icon: "power",
+    },
+    {
+        id: 11,
+        label: 'Диагностика',
+        icon: "insurance",
+    },
+    {
+        id: 12,
+        label: 'Инспекция и Проверка',
+        icon: "maintanance",
+    },
 ];
