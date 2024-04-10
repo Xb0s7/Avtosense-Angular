@@ -1,20 +1,23 @@
-<div class="service-details" ref="{ref}">
-    <div class="icon-container">{{selectedService.icon()}}</div>
-    <h3>{{selectedService.label}}</h3>
-    <fa-icon [icon]="faTimes" size={35} (onClick)='onCloseClick' class="close-button" />
+<div class="service-details" #details [ngClass]="{'active': (isActive$ | async)}">
+    @if (selectedService$ | async; as service) {
+    <div class="icon-container">{{ service.icon }}</div>
+    <h3>{{ service.label }}</h3>
+    <fa-icon [icon]="faTimes" (click)="onCloseClick()" class="close-button" />
     <div class="service-content">
-        <h5 class="description">{selectedService.intro}</h5>
+        <h5 class="description">{{ service.intro }}</h5>
         <ul>
-            @for (service of selectedService.allServices?)
-            {selectedService.allServices?.map((service, index) => (
-            <li key="{index}">
-                <FaCheckCircle
+            @for (item of service.allServices; track item.id) {
+            <li>
+                <!-- <FaCheckCircle
                     size="{20}"
                     class="service-list-icon"
-                ></FaCheckCircle>
-                <h6>{service.title} - <span>{service.description}</span></h6>
+                ></FaCheckCircle> -->
+                <h6>
+                    {{ item.title }} - <span>{{ item.description }}</span>
+                </h6>
             </li>
-            ))}
+            }
         </ul>
     </div>
+    }
 </div>

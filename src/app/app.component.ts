@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IntroSectionComponent } from './pages/intro-section/intro-section.component';
 import { ReviewsSectionComponent } from './pages/reviews-section/reviews-section.component';
 import { ContactsSectionComponent } from './pages/contacts-section/contacts-section.component';
@@ -12,7 +13,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [IntroSectionComponent, ReviewsSectionComponent, ContactsSectionComponent, ServicesSectionComponent, NavigationComponent, HttpClientModule, SvgIconComponent],
+  imports: [IntroSectionComponent, ReviewsSectionComponent, ContactsSectionComponent, ServicesSectionComponent, NavigationComponent, HttpClientModule, SvgIconComponent, CommonModule],
 })
 export class AppComponent {
   constructor() {}

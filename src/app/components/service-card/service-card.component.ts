@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ServiceDataService } from '../../services/service-data.service';
 
 @Component({
   selector: 'service-card',
@@ -7,7 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './service-card.component.scss'
 })
 export class ServiceCardComponent {
-  //add types
   @Input() service: any;
-  clickHandler = () => {}
+  
+  constructor(private serviceDataService: ServiceDataService) {}
+
+  onCardClick = () => {
+      this.serviceDataService.setIsActive(true);
+      this.serviceDataService.setSelectedService(this.service);
+  }
 }
