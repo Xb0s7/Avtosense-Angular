@@ -1,6 +1,10 @@
 <div class="service-details" #details [ngClass]="{'active': (isActive$ | async)}">
     @if (selectedService$ | async; as service) {
-    <div class="icon-container">{{ service.icon }}</div>
+    <div class="icon-container">
+        <svg class="icon">
+            <use [attr.xlink:href]="'assets/' + service.icon + '.svg#' + service.icon"></use>
+        </svg>
+    </div>
     <h3>{{ service.label }}</h3>
     <fa-icon [icon]="faTimes" (click)="onCloseClick()" class="close-button" />
     <div class="service-content">
@@ -8,10 +12,7 @@
         <ul>
             @for (item of service.allServices; track item.id) {
             <li>
-                <!-- <FaCheckCircle
-                    size="{20}"
-                    class="service-list-icon"
-                ></FaCheckCircle> -->
+                <fa-icon [icon]="faCheck" class="service-list-icon" />
                 <h6>
                     {{ item.title }} - <span>{{ item.description }}</span>
                 </h6>

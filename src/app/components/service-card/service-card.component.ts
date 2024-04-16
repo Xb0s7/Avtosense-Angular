@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { ServiceDataService } from '../../services/service-data.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class ServiceCardComponent {
   @Input() service: any;
   
   constructor(private serviceDataService: ServiceDataService) {}
-
+  @HostListener('click')
   onCardClick = () => {
       this.serviceDataService.setIsActive(true);
       this.serviceDataService.setSelectedService(this.service);

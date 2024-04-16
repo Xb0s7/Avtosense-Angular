@@ -1,0 +1,99 @@
+@use "../../../variables.scss";
+:host {
+    width: 30%;
+    background: #111111;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    align-self: stretch;
+    color: var(--color-text);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    pointer-events: none;
+}
+
+.card-header {
+    background: linear-gradient(
+        180deg,
+        rgba(226, 0, 0, 1) 0%,
+        rgba(36, 36, 36, 1) 96%
+    );
+    border-radius: 100% 0% 100% 100% / 0% 50% 50% 50%;
+    display: grid;
+    place-items: center;
+    padding: 2px 0px;
+
+    &::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        background-color: #1d1c1c;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    i {
+        color: #fff;
+        font-size: 72px;
+    }
+
+    .wrenchLottie {
+        transform: scale(2) !important;
+    }
+
+    .clockLottie {
+        padding: 10px;
+    }
+
+    .starLottie {
+        transform: scale(2) !important;
+    }
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    color: variables.$color-main;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.card-title {
+    color: variables.$color-main;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.card-text {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+
+@media (max-width: 1024px) {
+    :host {
+        width: calc(50% - 10px);
+        margin: 10px 0px;
+
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    :host {
+        width: 100%;
+        margin: 10px;
+        margin: 10px 0px;
+
+        &:first-child {
+            margin-right: 0px;
+        }
+    }
+}

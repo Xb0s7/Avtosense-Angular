@@ -154,12 +154,15 @@
             }
 
             .service-list-icon {
-                position: relative;
-                top: 4px;
-                margin: 10px 6px 0px 0px;
-                border-radius: 100%;
-                background-color: variables.$background-color-main;
-                fill: variables.$accent-color;
+                .svg-inline--fa{
+
+                    position: relative;
+                    top: 4px;
+                    margin: 10px 6px 0px 0px;
+                    border-radius: 100%;
+                    background-color: variables.$background-color-main;
+                    fill: variables.$accent-color;
+                }
             }
         }
         .description {

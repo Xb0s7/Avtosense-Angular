@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { ServiceDataService } from '../../services/service-data.service';
 import { ServiceDetails } from '../../shared/types/models';
 import { Observable, Subscription } from 'rxjs';
@@ -23,6 +23,7 @@ export class ServiceDetailsComponent implements OnInit, OnDestroy {
     @ViewChild('details') serviceDetailsRef!: ElementRef;
 
     faTimes = faTimes;
+    faCheck = faCheckCircle;
     selectedService$: Observable<ServiceDetails | null>;
     isActive$: Observable<boolean>;
     private isActiveSubscription: Subscription | undefined;

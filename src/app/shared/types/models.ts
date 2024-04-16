@@ -11,3 +11,11 @@ export interface ServiceDetails {
     intro: string 
     allServices: ServiceDetailsService[],
 }
+
+export interface CustomerCareCard  {
+    id: number,
+    styles: Partial<CSSStyleDeclaration>
+    lottie: string,
+    header: string,
+    description: string
+}

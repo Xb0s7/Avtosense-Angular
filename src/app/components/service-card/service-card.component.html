@@ -1,10 +1,12 @@
-<div class='service' (click)='onCardClick()'>
-    <div class='service-button-content'>
-        <div class='icon-container'>
-            <svg class="icon">
-                <use [attr.xlink:href]="'assets/' + service.icon + '.svg#' + service.icon"></use>
-            </svg>
-        </div>
-        <h4>{{service.label}}</h4>
+<div class="service-button-content">
+    <div class="icon-container">
+        <svg class="icon">
+            <use
+                [attr.xlink:href]="
+                    'assets/' + service.icon + '.svg#' + service.icon
+                "
+            ></use>
+        </svg>
     </div>
+    <h4>{{ service.label }}</h4>
 </div>

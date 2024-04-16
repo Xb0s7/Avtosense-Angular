@@ -9,10 +9,6 @@ export class ServiceDataService {
     isActiveSubject$ = new BehaviorSubject<boolean>(false);
     selectedService$ = new BehaviorSubject<ServiceDetails | null>(null);
 
-    constructor() {
-        console.log('ServiceDataService constructor called');
-    }
-
     setIsActive(isActive: boolean) {
         this.isActiveSubject$.next(isActive); // Call next() on the BehaviorSubject
     }

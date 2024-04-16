@@ -22,6 +22,27 @@
     -webkit-box-shadow: 0px 0px 10px 4px #c4c4c4b3;
     -moz-box-shadow: 0px 0px 10px 4px #c4c4c4b3;
 
+    .icon-container {
+        height: 70px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        margin: 0px 0px 20px 0px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.85);
+        transition: padding 1s, box-shadow 0.5s;
+        .icon {
+            height: inherit;
+            width: 100%;
+            padding: 12px;
+            color: variables.$color-main;
+            fill: variables.$color-main;
+        }
+    }
+
     &.active {
         left: 50%;
         transform: translateX(-50%);
@@ -84,12 +105,11 @@
         }
 
         .service-list-icon {
-            position: relative;
-            top: 4px;
-            margin: 10px 6px 0px 0px;
-            border-radius: 100%;
-            background-color: variables.$background-color-main;
-            fill: variables.$accent-color;
+                position: relative;
+                border-radius: 100%;
+                margin-right: 4px;
+                background-color: variables.$background-color-main;
+                color: variables.$accent-color;
         }
     }
     .description {
