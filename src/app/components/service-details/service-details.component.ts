@@ -65,7 +65,7 @@ export class ServiceDetailsComponent implements OnInit, OnDestroy {
 
             return () => clearTimeout(timer);
         } else {
-            this.serviceDetailsRef.nativeElement.classList.remove('active');
+            this.serviceDetailsRef?.nativeElement.classList.remove('active');
             window.scrollTo({
                 top: this.scrollPositionToReturn,
                 behavior: 'smooth',

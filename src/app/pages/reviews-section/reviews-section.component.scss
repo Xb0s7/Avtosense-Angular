@@ -1,5 +1,4 @@
 @use '../../../variables.scss';
-
 .reviews-section {
     @extend %layout;
     height: 100%;
@@ -17,18 +16,25 @@
         width: 100%;
         position: relative;
 
+        swiper-container {
+
+            --swiper-navigation-color: red;
+            --swiper-navigation-sides-offset: -5px;
+            div.swiper {
+                width: 100%;
+                position: unset;
+    
+                
+            }
+        }
         .reviews-container {
             padding: 40px;
             background-color: variables.$background-color-main;
             border-radius: 14px;
         }
 
-        .swiper {
-            width: 100%;
-            position: unset;
-        }
 
-        .swiper-slide {
+        swiper-slide {
             display: flex;
             flex-direction: column;
             border-radius: 7px;
@@ -37,16 +43,23 @@
             background-color: variables.$background-color-secondary;
             height: unset;
         }
-
-        .swiper-button-prev {
-            left: 5px;
+        .arrow {
+            top: 50%;
+            transform: translateY(-50%);
             position: absolute;
             color: variables.$accent-color;
+            background-color: unset;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+
+        }
+        .swiper-button-prev {
+            left: 5px;
+            transform: translate(0%, -50%) rotate(180deg);
         }
         .swiper-button-next {
             right: 5px;
-            position: absolute;
-            color: variables.$accent-color;
         }
 
         .reviewer {

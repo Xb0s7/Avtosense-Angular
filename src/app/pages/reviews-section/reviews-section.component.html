@@ -2,25 +2,32 @@
     <h3 class="section-header">Ревюта</h3>
     <div class="container">
         <div class="reviews-container">
-            <!-- <Swiper
-                modules={[Navigation]}
-                navigation={isTablet}
-                spaceBetween={20}
-                slidesPerView={1}
-                {...{ breakpoints }}
-                loop
-            >
-                {REVIEWS.map((review, index) => (
-                    <SwiperSlide key={index} class="slide">
-                        <div class="rating"><span>Rating:</span> {showRating(review.rating)}</div>
-                        <p class="reviewer-text">{review.text}</p>
-                        <div class="reviewer">
-                            <img src={review.reviewer_avatar}></img>
-                            <p>{review.reviewer}</p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>  CHECK SWIPER -->
+            <swiper-container init="false" #swiperContainer>
+                @for (review of reviews; track review.id) {
+                <swiper-slide class="slide">
+                    <div class="rating"><span>Rating:</span>
+                        @for(stars of showRating(review); track stars.id) {
+                            <svg class='star'  [class.filled]="stars.filled">
+                                <use
+                                    xlink:href="assets/star.svg#star"
+                                ></use>
+                            </svg>
+                        }
+                    </div>
+                    <p class="reviewer-text">{{ review.text }}</p>
+                    <div class="reviewer">
+                        <img [src]="review.reviewer_avatar" />
+                        <p>{{ review.reviewer }}</p>
+                    </div>
+                </swiper-slide>
+                }
+            </swiper-container>
+            <button class="swiper-button-prev arrow">
+                <fa-icon [icon]="faArrow" class="arrow-icon" />
+            </button>
+            <button class="swiper-button-next arrow">
+                <fa-icon [icon]="faArrow" class="arrow-icon" />
+            </button>
         </div>
     </div>
 </div>

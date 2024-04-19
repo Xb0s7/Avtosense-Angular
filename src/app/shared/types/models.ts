@@ -19,3 +19,12 @@ export interface CustomerCareCard  {
     header: string,
     description: string
 }
+
+export interface Review  {
+    id: number;
+    reviewer: string;
+    reviewer_avatar: string;
+    datetime: string;
+    rating: number;
+    text: string;
+}

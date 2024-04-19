@@ -1,0 +1,30 @@
+:host .swiper-wrapper {
+        background-color: red;
+        width: 100%;
+        position: unset;
+    }
+    
+/* .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: variables.$background-color-secondary;
+    height: unset;
+}
+
+.swiper-button-prev {
+    left: 5px;
+    position: absolute;
+    color: variables.$accent-color;
+}
+.swiper-button-next {
+    right: 5px;
+    position: absolute;
+    color: variables.$accent-color;
+    svg {
+        color: variables.$accent-color;
+        fill: variables.$accent-color;
+    }
+} */
