@@ -1,9 +1,9 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild,  } from '@angular/core';
+import { Component } from '@angular/core';
 import { SERVICES_ITEMS } from '../../config/services-config';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
 import { ServiceDetailsComponent } from '../../components/service-details/service-details.component';
 import { ServiceDetails } from '../../shared/types/models';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ServiceDataService } from '../../services/service-data.service';
 
 @Component({

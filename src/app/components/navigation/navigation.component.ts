@@ -23,6 +23,7 @@ export class NavigationComponent {
         block: "start",
         inline: "nearest"
       });
+      this.closeMenuOnClick()
     }
 
     closeMenuOnClick = () => {

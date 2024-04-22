@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 import { CustomerCareCard } from '../../shared/types/models';
 

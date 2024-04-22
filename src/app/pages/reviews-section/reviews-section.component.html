@@ -22,12 +22,14 @@
                 </swiper-slide>
                 }
             </swiper-container>
-            <button class="swiper-button-prev arrow">
-                <fa-icon [icon]="faArrow" class="arrow-icon" />
-            </button>
-            <button class="swiper-button-next arrow">
-                <fa-icon [icon]="faArrow" class="arrow-icon" />
-            </button>
+            @if(showNavigation) {
+                <button class="swiper-button-prev arrow">
+                    <fa-icon [icon]="faArrow" class="arrow-icon" />
+                </button>
+                <button class="swiper-button-next arrow">
+                    <fa-icon [icon]="faArrow" class="arrow-icon" />
+                </button>
+            }
         </div>
     </div>
 </div>

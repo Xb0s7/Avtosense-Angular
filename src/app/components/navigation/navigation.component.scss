@@ -17,7 +17,8 @@
     top: 25px;
     border-radius: 14px;
     left: 20px;
-    background: #1e1e1e;
+    background: hsla(0, 0%, 12%, 0.689);
+    backdrop-filter: blur(10px);
     padding-top: 30px;
 
     .logo-link {
@@ -154,6 +155,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    body:has(.menu-items.opened) {
+        position: fixed;
+        overflow: hidden;
+    }
+
     .section-navigation {
         position: fixed;
         z-index: 5;
@@ -180,13 +186,18 @@
             }
 
             .external-links {
-                width: 50%;
+                align-items: center;
+                margin-bottom: 0;
+                gap: 16px;
+            }
+
+            .link {
+                margin: 0;
             }
 
             .hamburger-btn {
                 display: block;
                 padding: 10px;
-                right: 25px;
                 top: 20px;
                 z-index: 3;
                 width: 30px;
@@ -196,7 +207,8 @@
                 border: none;
                 background-color: transparent;
                 position: relative;
-
+                transform: translateY(-100%);
+                margin-right: 10px;
                 &::before,
                 &::after,
                 span {
@@ -248,28 +260,29 @@
             margin-bottom: 0;
             li {
                 padding: 10px 0px;
-
                 &:after {
                     display: none;
                 }
+                .navigation-link {
+                    border-bottom: 1px solid white;
+                    .tooltiptext {
+                        padding: 10px;
+                        border-radius: 12px;
+                        font-size: 18px;
+                        border: none;
+                    }   
+                }
             }
-
             &.opened {
                 visibility: visible;
                 padding-top: 0px;
                 transform: none;
                 margin-top: 10px;
                 max-height: calc(100vh - 73px);
-                height: 85vh;
+                height: 100vh;
+                overflow: auto;
             }
-
-            .navigation-link {
-                
-                .tooltiptext {
-                    font-size: 18px;
-                    border: none;
-                }   
-            }
+        
         }
     }
 }
